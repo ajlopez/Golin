@@ -60,4 +60,11 @@ func TestSimpleListAsString(t *testing.T) {
     }
 }
 
+func TestListWithTwoElementsAsString(t *testing.T) {
+    var l = List{42, &List{1, nil}}
+
+    if l.AsString() != "(42 1)" {
+        t.Fatal("l.AsString() is not (42 1)")
+    }
+}
 
