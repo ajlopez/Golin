@@ -43,4 +43,13 @@ func TestListFirstIsNil(t *testing.T) {
         t.Fatal("l.Rest() is not nil")
     }
 }
-
+
+func TestNilAsString(t *testing.T) {
+    var l *List = nil
+
+    if l.AsString() != "nil" {
+        t.Fatal("l.AsString() is not nil")
+    }
+}
+
+
