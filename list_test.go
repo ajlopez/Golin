@@ -6,10 +6,10 @@ func TestListFirst(t *testing.T) {
     var l = List{42, nil}
     
     if l.First() != 42 {
-        t.Fail()
+        t.Fatal("l.First() is not 42")
     }
     
     if l.Rest() != nil {
-        t.Fail()
+        t.Fatal("l.Rest() is not nil")
     }
 }
