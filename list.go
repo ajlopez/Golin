@@ -13,3 +13,7 @@ func (l *List) Rest() *List {
     return l.tail
 }
 
+func (l *List) AsString() string {
+    return "nil"
+}
+

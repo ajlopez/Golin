@@ -43,4 +43,4 @@ func TestListFirstIsNil(t *testing.T) {
         t.Fatal("l.Rest() is not nil")
     }
 }
-
+
