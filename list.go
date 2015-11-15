@@ -14,6 +14,12 @@ func (l *List) Rest() *List {
 }
 
 func (l *List) AsString() string {
-    return "nil"
+    if l == nil {
+        return "nil"
+    }
+    
+    var result = "(" + AsString(l.head) + ")"
+    
+    return result
 }
 

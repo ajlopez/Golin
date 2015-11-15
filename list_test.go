@@ -52,4 +52,12 @@ func TestNilAsString(t *testing.T) {
     }
 }
 
+func TestSimpleListAsString(t *testing.T) {
+    var l = List{42, nil}
+
+    if l.AsString() != "(42)" {
+        t.Fatal("l.AsString() is not (42)")
+    }
+}
+
 
