@@ -13,13 +13,13 @@ func (l *List) Rest() *List {
     return l.tail
 }
 
-func asString(l *List) string {
+func toString(l *List) string {
     if l == nil {
         return ""
     }
     
-    var shead = AsString(l.head)
-    var stail = asString(l.tail)
+    var shead = String(l.head)
+    var stail = toString(l.tail)
     
     var result = " " + shead
     
@@ -30,12 +30,12 @@ func asString(l *List) string {
     return result + stail
 }
 
-func (l *List) AsString() string {
+func (l *List) String() string {
     if l == nil {
         return "nil"
     }
     
-    var result = "(" + AsString(l.head) + asString(l.tail) + ")"
+    var result = "(" + String(l.head) + toString(l.tail) + ")"
     
     return result
 }

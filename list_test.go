@@ -44,27 +44,27 @@ func TestListFirstIsNil(t *testing.T) {
     }
 }
 
-func TestNilAsString(t *testing.T) {
+func TestNilString(t *testing.T) {
     var l *List = nil
 
-    if l.AsString() != "nil" {
-        t.Fatal("l.AsString() is not nil")
+    if l.String() != "nil" {
+        t.Fatal("l.String() is not nil")
     }
 }
 
-func TestSimpleListAsString(t *testing.T) {
+func TestSimpleListString(t *testing.T) {
     var l = List{42, nil}
 
-    if l.AsString() != "(42)" {
-        t.Fatal("l.AsString() is not (42)")
+    if l.String() != "(42)" {
+        t.Fatal("l.String() is not (42)")
     }
 }
 
-func TestListWithTwoElementsAsString(t *testing.T) {
+func TestListWithTwoElementsString(t *testing.T) {
     var l = List{42, &List{1, nil}}
 
-    if l.AsString() != "(42 1)" {
-        t.Fatal("l.AsString() is not (42 1)")
+    if l.String() != "(42 1)" {
+        t.Fatal("l.String() is not (42 1)")
     }
 }
 

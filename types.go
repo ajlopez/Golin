@@ -6,7 +6,7 @@ type SExpr interface {}
 
 type SValue interface {
     Evaluate(*Env) SExpr
-    AsString() string
+    String() string
 }
 
 type Symbol string
@@ -19,9 +19,9 @@ func Evaluate(a SExpr, env *Env) SExpr {
     return a
 }
 
-func AsString(a SExpr) string {
+func String(a SExpr) string {
     if v, ok := a.(SValue); ok {
-        return v.AsString()
+        return v.String()
     }
     
     return fmt.Sprint(a)
