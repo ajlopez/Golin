@@ -5,12 +5,10 @@ type Atom struct {
 }
 
 func (a *Atom) Evaluate(env *Env) SExpr {
-    return env.Find(a.name)
+    return env.Get(a.name)
 }
 
 func (a *Atom) String() string {
     return string(a.name)
 }
-
-
 

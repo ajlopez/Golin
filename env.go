@@ -15,7 +15,7 @@ func (e *Env) Set(symbol Symbol, value SExpr) {
     e.values[symbol] = value
 }
 
-func (e *Env) Find(symbol Symbol) SExpr {
+func (e *Env) Get(symbol Symbol) SExpr {
     return e.values[symbol]
 }
 
