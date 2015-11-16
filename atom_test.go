@@ -13,6 +13,18 @@ func TestEvaluateUndefinedAtom(t *testing.T) {
     }
 }
 
+func TestAssocAndEvaluateAtom(t *testing.T) {
+    var env = NewEnv()
+    var atom = Atom{"foo"}
+    atom.Assoc(env, 42);
+    
+    var result = atom.Evaluate(env)
+    
+    if result != 42 {
+        t.Fatal("atom.Evaluate(env) is not 42")
+    }
+}
+
 func TestAtomString(t *testing.T) {
     var atom = Atom{"foo"}
     
