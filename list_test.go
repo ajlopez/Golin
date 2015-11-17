@@ -68,3 +68,26 @@ func TestListWithTwoElementsString(t *testing.T) {
     }
 }
 
+var first Func = func (args []SExpr) SExpr {
+    var l = args[0].(List)
+    
+    return l.First()
+}
+
+func TestEvaluateFirst(t *testing.T) {
+    var f = Atom{"first"}
+    var a = Atom{"a"}
+    
+    var env = NewEnv()
+    
+    f.Assoc(env, first)
+    a.Assoc(env, List{42,nil})
+    
+    var l = List{f, &List{a, nil}}    
+    var result = l.Evaluate(env)
+    
+    if result != 42 {
+        t.Fatal("l.Evaluate(env) is not 42")
+    }
+}
+

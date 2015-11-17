@@ -9,6 +9,8 @@ type SValue interface {
     String() string
 }
 
+type Func func (args []SExpr) SExpr
+
 type Symbol string
 
 func Evaluate(a SExpr, env *Env) SExpr {

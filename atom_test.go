@@ -18,7 +18,7 @@ func TestAssocAndEvaluateAtom(t *testing.T) {
     var atom = Atom{"foo"}
     atom.Assoc(env, 42);
     
-    var result = atom.Evaluate(env)
+    var result = Evaluate(atom, env)
     
     if result != 42 {
         t.Fatal("atom.Evaluate(env) is not 42")
