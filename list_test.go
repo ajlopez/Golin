@@ -14,7 +14,8 @@ func TestListFirstRest(t *testing.T) {
     }
 }
 
-func TestListWithTwoElements(t *testing.T) {    var l = List{42, &List{1, nil}}    
+func TestListWithTwoElements(t *testing.T) {    var l = List{42, &List{1, nil}}
+    
     if l.First() != 42 {
         t.Fatal("l.First() is not 42")
     }
@@ -45,18 +46,19 @@ func TestListFirstIsNil(t *testing.T) {
 }
 
 func TestNilString(t *testing.T) {
-    var l *List = nil
+    var l SExpr = nil
 
-    if l.String() != "nil" {
+    if String(l) != "nil" {
         t.Fatal("l.String() is not nil")
     }
 }
 
 func TestSimpleListString(t *testing.T) {
     var l = List{42, nil}
+    var result = l.String()
 
-    if l.String() != "(42)" {
-        t.Fatal("l.String() is not (42)")
+    if result != "(42)" {
+        t.Fatalf("l.String() is %s, expeceted (42)", result)
     }
 }
 
@@ -65,6 +67,15 @@ func TestListWithTwoElementsString(t *testing.T) {
 
     if l.String() != "(42 1)" {
         t.Fatal("l.String() is not (42 1)")
+    }
+}
+
+func TestListWithNestedList(t *testing.T) {
+    var l = List{List{42, nil}, &List{1, nil}}
+    var result = l.String()
+
+    if result != "((42) 1)" {
+        t.Fatalf("l.String() is %s, expected ((42) 1)", result)
     }
 }
 

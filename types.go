@@ -22,6 +22,10 @@ func Evaluate(a SExpr, env *Env) SExpr {
 }
 
 func String(a SExpr) string {
+    if a == nil {
+        return "nil"
+    }
+    
     if v, ok := a.(SValue); ok {
         return v.String()
     }
