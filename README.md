@@ -4,6 +4,8 @@ Lisp Interpreter in Go (golang) WIP
 
 ## References
 
+Lisp interpreters
+
 - [Golang LISP Interpreter](https://zhehaomao.com/project/2014/03/28/glisp.html)
 - [LISP dialect implemented in Go](https://github.com/zhemao/glisp)
 - [A simple Lisp interpreter developed in Go](https://github.com/janne/go-lisp)
@@ -13,5 +15,11 @@ Lisp Interpreter in Go (golang) WIP
 - [Gisp: A Lisp that compiles to Go](https://news.ycombinator.com/item?id=7216396)
 - [Twik: a tiny language for Go](https://www.reddit.com/r/golang/comments/1ih03w/twik_a_tiny_language_for_go/)
 - [A Go-lang Lisp](http://www.blackkettle.org/blog/2012/04/29/go-lang-micro-manual-for-lisp/)
+
+Golang arrays
+
 - [Arrays, slices (and strings): The mechanics of 'append'](https://blog.golang.org/slices)
 - [Controlling Array Growth in Golang](http://openmymind.net/Controlling-Array-Growth-In-Golang/)
+- [The Minimum You Need To Know About Arrays and Slices in Golang](http://openmymind.net/The-Minimum-You-Need-To-Know-About-Arrays-And-Slices-In-Go/)
+
+
