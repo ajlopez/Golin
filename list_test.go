@@ -2,6 +2,23 @@ package golin
 
 import "testing"
 
+func TestListToArray(t *testing.T) {
+    var l = List{42, &List{1, nil}}
+    var result = l.Array()
+    
+    if len(result) != 2 {
+        t.Fatalf("Len of l.Array is %d expected 2", len(result));
+    }
+    
+    if result[0] != 42 {
+        t.Fatalf("l.Array()[0] is %d expected 42", result[0]);
+    }
+    
+    if result[1] != 1 {
+        t.Fatalf("l.Array()[1] is %d expected 42", result[1]);
+    }
+}
+
 func TestListFirstRest(t *testing.T) {
     var l = List{42, nil}
     

@@ -30,6 +30,25 @@ func toString(l *List) string {
     return result + stail
 }
 
+func (l *List) Array() []SExpr {
+    if l == nil {
+        return make([]SExpr, 0)
+    }
+    
+    if (l.tail == nil) {
+        var arr = make([]SExpr, 1)
+        arr[0] = l.head
+        return arr
+    }
+    
+    var arrtail = l.tail.Array()
+    var arr = make([]SExpr, len(arrtail) + 1)
+    arr[0] = l.head
+    copy(arr[1:], arrtail)
+    
+    return arr
+}
+
 func (l List) String() string {
     var result = "(" + String(l.head) + toString(l.tail) + ")"
     
