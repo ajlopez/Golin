@@ -19,6 +19,15 @@ func TestListToArray(t *testing.T) {
     }
 }
 
+func TestEmptyListToArray(t *testing.T) {
+    var l *List = nil
+    var result = l.Array()
+    
+    if len(result) != 0 {
+        t.Fatalf("Len of empty list is %d expected 0", len(result));
+    }
+}
+
 func TestListFirstRest(t *testing.T) {
     var l = List{42, nil}
     
