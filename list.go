@@ -57,9 +57,13 @@ func (l List) String() string {
 
 func (l List) Evaluate(env *Env) SExpr {
     var fn = Evaluate(l.head, env).(Func)
-    var args []SExpr
-    var arg = Evaluate(l.tail.First(), env)
-    args = append(args, arg)
+    
+    var elems = l.tail.Array()
+    var args []SExpr = make([]SExpr, len(elems))
+    
+    for k := 0; k < len(elems); k++ {
+        args[k] = Evaluate(elems[k], env)
+    }
     
     return fn(args)
 }
