@@ -111,6 +111,13 @@ var first Func = func (args []SExpr) SExpr {
     return l.First()
 }
 
+var cons Func = func (args []SExpr) SExpr {
+    var head = args[0]
+    var tail = args[1].(List)
+    
+    return List{head, &tail}
+}
+
 func TestEvaluateFirst(t *testing.T) {
     var f = Atom{"first"}
     var a = Atom{"a"}
@@ -127,4 +134,24 @@ func TestEvaluateFirst(t *testing.T) {
         t.Fatal("l.Evaluate(env) is not 42")
     }
 }
+
+func TestEvaluateCons(t *testing.T) {
+    var f = Atom{"cons"}
+    var a = Atom{"a"}
+    var b = Atom{"b"}
+    
+    var env = NewEnv()
+    
+    f.Assoc(env, cons)
+    a.Assoc(env, 1)
+    b.Assoc(env, List{42,nil})
+    
+    var l = List{f, &List{a, &List{b, nil}}}    
+    var result = l.Evaluate(env).(List)
+    
+    if result.String() != "(1 42)" {
+        t.Fatalf("(cons a b) is %s expected (1 42)", result.String())
+    }
+}
+
 
