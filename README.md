@@ -22,4 +22,8 @@ Golang arrays
 - [Controlling Array Growth in Golang](http://openmymind.net/Controlling-Array-Growth-In-Golang/)
 - [The Minimum You Need To Know About Arrays and Slices in Golang](http://openmymind.net/The-Minimum-You-Need-To-Know-About-Arrays-And-Slices-In-Go/)
 
+Golang constants
+
+- [Golang: Constants, enums and iota](http://blog.denevell.org/golang-constants-enums.html)
+
 
