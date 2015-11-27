@@ -12,3 +12,12 @@ func TestParserReturnsNilIfEmptyString(t *testing.T) {
     }
 }
 
+func TestParseName(t *testing.T) {
+    parser := NewParser("name")
+    
+    result := parser.NextToken()
+    
+    if result == nil || result.Value() != "name" || result.Type() != Name {
+        t.Fatal("Parser does not parse name")
+    }
+}
