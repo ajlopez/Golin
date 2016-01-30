@@ -31,3 +31,12 @@ Golang lexer, parser
 - [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
 - [Handwritten Parsers & Lexers in Go](https://blog.gopheracademy.com/advent-2014/parsers-lexers/)
 - [Two Go Talks: "Lexical Scanning in Go" and "Cuddle: an App Engine Demo"](http://blog.golang.org/two-go-talks-lexical-scanning-in-go-and)
+
+Golan packages
+
+- [How to Write Go Code](https://golang.org/doc/code.html)
+- [Organizing Go code](https://talks.golang.org/2014/organizeio.slide#1)
+- [What is a sensible way to layout a Go project](http://stackoverflow.com/questions/14867452/what-is-a-sensible-way-to-layout-a-go-project)
+- [Five suggestions for setting up a Go project](http://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project)
+- [What's in a name?](http://talks.golang.org/2014/names.slide#1)
+

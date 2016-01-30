@@ -1,5 +1,7 @@
 package golin
 
+import "github.com/ajlopez/golin/parser"
+
 type Atom struct {
     name Symbol
 }

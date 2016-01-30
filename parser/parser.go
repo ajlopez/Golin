@@ -1,5 +1,5 @@
 
-package golin
+package parser
 
 type TokenType int
 

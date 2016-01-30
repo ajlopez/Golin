@@ -1,4 +1,4 @@
-package golin
+package parser
 
 import "testing"
 
