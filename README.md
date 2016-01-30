@@ -26,4 +26,8 @@ Golang constants
 
 - [Golang: Constants, enums and iota](http://blog.denevell.org/golang-constants-enums.html)
 
+Golang lexer, parser
 
+- [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
+- [Handwritten Parsers & Lexers in Go](https://blog.gopheracademy.com/advent-2014/parsers-lexers/)
+- [Two Go Talks: "Lexical Scanning in Go" and "Cuddle: an App Engine Demo"](http://blog.golang.org/two-go-talks-lexical-scanning-in-go-and)
