@@ -40,3 +40,4 @@ Golang
 - [Five suggestions for setting up a Go project](http://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project)
 - [What's in a name?](http://talks.golang.org/2014/names.slide#1)
 - [Pointers vs. values in parameters and return values](https://stackoverflow.com/questions/23542989/pointers-vs-values-in-parameters-and-return-values)
+- [The Empty Interface](https://tour.golang.org/methods/14)
