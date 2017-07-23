@@ -32,11 +32,11 @@ Golang lexer, parser
 - [Handwritten Parsers & Lexers in Go](https://blog.gopheracademy.com/advent-2014/parsers-lexers/)
 - [Two Go Talks: "Lexical Scanning in Go" and "Cuddle: an App Engine Demo"](http://blog.golang.org/two-go-talks-lexical-scanning-in-go-and)
 
-Golan packages
+Golang
 
 - [How to Write Go Code](https://golang.org/doc/code.html)
 - [Organizing Go code](https://talks.golang.org/2014/organizeio.slide#1)
 - [What is a sensible way to layout a Go project](http://stackoverflow.com/questions/14867452/what-is-a-sensible-way-to-layout-a-go-project)
 - [Five suggestions for setting up a Go project](http://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project)
 - [What's in a name?](http://talks.golang.org/2014/names.slide#1)
-
+- [Pointers vs. values in parameters and return values](https://stackoverflow.com/questions/23542989/pointers-vs-values-in-parameters-and-return-values)
