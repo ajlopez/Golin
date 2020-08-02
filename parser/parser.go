@@ -12,7 +12,11 @@ type Token interface {
     Type() TokenType
 }
 
-type Parser struct {
+type Parser interface {
+    NextToken() Token
+}
+
+type parser struct {
     text string
     length int
     position int
@@ -31,15 +35,15 @@ func (t token) Type() TokenType {
     return t.typ
 }
 
-func NewParser(text string) Parser {
-    return Parser{text, 0, 0}
-}
-
-func (parser Parser) NextToken() Token {
+func (parser parser) NextToken() Token {
     if len(parser.text) == 0 {
         return nil
     }
     
     return token{parser.text, Name}
+}
+
+func NewParser(text string) Parser {
+    return parser{text, 0, 0}
 }
 
