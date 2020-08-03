@@ -41,3 +41,4 @@ Golang
 - [What's in a name?](http://talks.golang.org/2014/names.slide#1)
 - [Pointers vs. values in parameters and return values](https://stackoverflow.com/questions/23542989/pointers-vs-values-in-parameters-and-return-values)
 - [The Empty Interface](https://tour.golang.org/methods/14)
+- [Structs and Interfaces](https://www.golang-book.com/books/intro/9)
