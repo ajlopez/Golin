@@ -55,7 +55,7 @@ func (l List) String() string {
     return result
 }
 
-func (l List) Evaluate(env *Env) SExpr {
+func (l *List) Evaluate(env *Env) SExpr {
     var fn = Evaluate(l.head, env).(Func)
     
     var elems = l.tail.Array()
