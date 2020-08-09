@@ -42,3 +42,8 @@ Golang
 - [Pointers vs. values in parameters and return values](https://stackoverflow.com/questions/23542989/pointers-vs-values-in-parameters-and-return-values)
 - [The Empty Interface](https://tour.golang.org/methods/14)
 - [Structs and Interfaces](https://www.golang-book.com/books/intro/9)
+- [Go Type System Overview](https://go101.org/article/type-system-overview.html)
+- [Methods in Go](https://go101.org/article/method.html)
+- [Interfaces in Go](https://go101.org/article/interface.html#implementation)
+- [Type Embedding](https://go101.org/article/type-embedding.html)
+
