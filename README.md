@@ -46,4 +46,4 @@ Golang
 - [Methods in Go](https://go101.org/article/method.html)
 - [Interfaces in Go](https://go101.org/article/interface.html#implementation)
 - [Type Embedding](https://go101.org/article/type-embedding.html)
-
+- [X does not implement Y (… method has a pointer receiver)](https://stackoverflow.com/questions/40823315/x-does-not-implement-y-method-has-a-pointer-receiver)
