@@ -9,5 +9,3 @@ type Value interface {}
 
 type Func func (args []*SExpr) *SExpr
 
-type Symbol string
-

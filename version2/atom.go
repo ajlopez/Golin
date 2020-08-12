@@ -1,7 +1,7 @@
 package golin2
 
 type Atom struct {
-    name Symbol
+    name string
 }
 
 func (a *Atom) Evaluate(env *Env) *SExpr {
@@ -13,6 +13,6 @@ func (a *Atom) Assoc(env *Env, value SExpr) {
 }
 
 func (a *Atom) String() string {
-    return string(a.name)
+    return a.name
 }
 

@@ -17,6 +17,7 @@ func TestAssocAndEvaluateAtom(t *testing.T) {
     var env = NewEnv()
     var atom = Atom{"foo"}
     var value = Atom{"bar"}
+    var _ SExpr = (*Atom)(nil)
     atom.Assoc(env, &value);
     
     var result SExpr = *atom.Evaluate(env)
