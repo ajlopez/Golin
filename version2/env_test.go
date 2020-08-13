@@ -17,12 +17,11 @@ func TestSetAndFindValue(t *testing.T) {
     var symbol string = "foo"
     var atom = Atom{"bar"}
     var _ SExpr = (*Atom)(nil)
-    env.Set(symbol, &atom)
+    env.Set(symbol, atom)
     var result = env.Get(symbol)
-/*    
-    if result != 42 {
+
+    if result.(Atom).name != "bar" {
         t.Fail()
     }
-    */
 }
 
