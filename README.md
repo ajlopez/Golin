@@ -47,3 +47,4 @@ Golang
 - [Interfaces in Go](https://go101.org/article/interface.html#implementation)
 - [Type Embedding](https://go101.org/article/type-embedding.html)
 - [X does not implement Y (… method has a pointer receiver)](https://stackoverflow.com/questions/40823315/x-does-not-implement-y-method-has-a-pointer-receiver)
+- [pointer to interface is not an interface error?](https://stackoverflow.com/questions/51611086/pointer-to-interface-is-not-an-interface-error/51611252)
