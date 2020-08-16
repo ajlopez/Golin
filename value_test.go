@@ -1,4 +1,4 @@
-package golin2
+package golin
 
 import "testing"
 

@@ -4,7 +4,7 @@ import "testing"
 
 func TestGetUndefinedValue(t *testing.T) {
     var env = NewEnv()
-    var symbol Symbol = "foo"
+    var symbol string = "foo"
     var result = env.Get(symbol)
     
     if result != nil {
@@ -14,11 +14,14 @@ func TestGetUndefinedValue(t *testing.T) {
 
 func TestSetAndFindValue(t *testing.T) {
     var env = NewEnv()
-    var symbol Symbol = "foo"
-    env.Set(symbol, 42)
+    var symbol string = "foo"
+    var atom = Atom{"bar"}
+    var _ SExpr = (*Atom)(nil)
+    env.Set(symbol, atom)
     var result = env.Get(symbol)
-    
-    if result != 42 {
+
+    if result.(Atom).name != "bar" {
         t.Fail()
     }
 }
+

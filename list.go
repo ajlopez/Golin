@@ -18,7 +18,7 @@ func toString(l *List) string {
         return ""
     }
     
-    var shead = String(l.head)
+    var shead = l.head.String()
     var stail = toString(l.tail)
     
     var result = " " + shead
@@ -50,19 +50,19 @@ func (l *List) Array() []SExpr {
 }
 
 func (l List) String() string {
-    var result = "(" + String(l.head) + toString(l.tail) + ")"
+    var result = "(" + l.head.String() + toString(l.tail) + ")"
     
     return result
 }
 
-func (l *List) Evaluate(env *Env) SExpr {
-    var fn = l.head.(SValue).Evaluate(env).(Func)
+func (l List) Evaluate(env *Env) SExpr {
+    var fn = l.head.Evaluate(env).(Func)
     
     var elems = l.tail.Array()
     var args []SExpr = make([]SExpr, len(elems))
     
     for k := 0; k < len(elems); k++ {
-        args[k] = Evaluate(elems[k], env)
+        args[k] = elems[k].Evaluate(env)
     }
     
     return fn(args)

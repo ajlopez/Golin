@@ -1,21 +1,21 @@
 package golin
 
 type Env struct {
-    values map[Symbol]SExpr       
+    values map[string]SExpr
 }
 
 func NewEnv() *Env {
     var e = new(Env)
-    e.values = make(map[Symbol]SExpr)
+    e.values = make(map[string]SExpr)
     
     return e
 }
 
-func (e *Env) Set(symbol Symbol, value SExpr) {
-    e.values[symbol] = value
+func (e *Env) Set(name string, value SExpr) {
+    e.values[name] = value
 }
 
-func (e *Env) Get(symbol Symbol) SExpr {
-    return e.values[symbol]
+func (e *Env) Get(name string) SExpr {
+    return e.values[name]
 }
 

@@ -1,9 +1,4 @@
-package golin2
-
-type SExpr interface {
-    Evaluate(*Env) SExpr
-    String() string
-}
+package golin
 
 type Func func (args []SExpr) SExpr
 
