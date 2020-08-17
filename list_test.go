@@ -90,6 +90,15 @@ func TestSimpleListString(t *testing.T) {
     }
 }
 
+func TestSimpleListWithNilToString(t *testing.T) {
+    var l = List{nil, nil}
+    var result = l.String()
+
+    if result != "(nil)" {
+        t.Fatalf("l.String() is %s, expeceted (42)", result)
+    }
+}
+
 func TestListWithTwoElementsString(t *testing.T) {
     var l = List{Value{42}, &List{Value{1}, nil}}
 

@@ -50,7 +50,15 @@ func (l *List) Array() []SExpr {
 }
 
 func (l List) String() string {
-    var result = "(" + l.head.String() + toString(l.tail) + ")"
+    var headstr string
+    
+    if (l.head == nil) {
+        headstr = "nil"
+    } else {
+        headstr = l.head.String()
+    }
+        
+    var result = "(" + headstr + toString(l.tail) + ")"
     
     return result
 }
